@@ -5,7 +5,7 @@
  - keyboard 0.13.5+
  - PyAutoGUI 0.9.53+
  - pyperclip 1.8.2+
- - deep-translator 1.9.1
+ - deep-translator 1.9.1+
 # How it work's
  When you press the "Ctrl + Alt" key combination, you enable the auto-translation script. 
  The script translates the copied text when pressing the key combination "Ctrl + C" and pastes it into the clipboard.
