@@ -27,29 +27,8 @@ def foo():
         print("Coped! foo")
         print(text)
         text = ""
-        
-
-# def print_pressed_keys(e):
-#     global text
-#     global lang
-#     if e.event_type == 'down':
-#         if e.name in symbolsENG:
-#             print(e.name)
-#             text += str(e.name)
-#             lang = "ru"
-#         if e.name in symbolsRU:
-#             print(e.name)
-#             text += str(e.name)
-#             lang = "en"
-#         if e.name == 'space':
-#             text += " "
-
-# def PasteTranslate():
-#     global text
-#     global lang
-#     pyperclip.copy(GoogleTranslator(source='auto', target=lang).translate(text))
-#     print("Coped!")
-#     text = ""
+    else 
+        print("off Script")
 
 text = ""
 lang = ""
@@ -62,9 +41,6 @@ symbolsRU = ['й','ц','у','к','е','н','г','ш','щ','з','х','ъ','ф','�
 
 keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
 keyboard.add_hotkey('Ctrl + C', foo)
-
-# keyboard.hook(print_pressed_keys)
-# keyboard.add_hotkey('Alt + C', PasteTranslate)
 
 print("Soft start!")
 
