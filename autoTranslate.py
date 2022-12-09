@@ -4,7 +4,6 @@ import time
 import pyperclip
 from deep_translator import GoogleTranslator
 
-
 def OnOffFunc():
     global enabled
     if enabled == "off":
@@ -46,5 +45,4 @@ keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
 keyboard.add_hotkey('Ctrl + C', foo)
 
 print("Soft start!")
-
 keyboard.wait('Ctrl + Q')
