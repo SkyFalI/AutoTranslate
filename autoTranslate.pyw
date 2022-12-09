@@ -20,14 +20,14 @@ def foo():
         time.sleep(0.05)
         text = pyperclip.paste()
         try: 
-        if text[0] in symbolsRU:
-            lang = "en"
-        if text[0] in symbolsENG:
-            lang = "ru"        
-        pyperclip.copy(GoogleTranslator(source='auto', target=lang).translate(text))
-        print("Coped! foo")
-        print(text)
-        text = ""
+            if text[0] in symbolsRU:
+                lang = "en"
+            if text[0] in symbolsENG:
+                lang = "ru"        
+            pyperclip.copy(GoogleTranslator(source='auto', target=lang).translate(text))
+            print("Coped! foo")
+            print(text)
+            text = ""
         except:
             print('Eror find symbols')
     else:
