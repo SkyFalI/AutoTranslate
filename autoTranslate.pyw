@@ -19,15 +19,18 @@ def foo():
     if enabled == "on":
         time.sleep(0.05)
         text = pyperclip.paste()
+        try: 
         if text[0] in symbolsRU:
             lang = "en"
         if text[0] in symbolsENG:
-            lang = "ru"
+            lang = "ru"        
         pyperclip.copy(GoogleTranslator(source='auto', target=lang).translate(text))
         print("Coped! foo")
         print(text)
         text = ""
-    else 
+        except:
+            print('Eror find symbols')
+    else:
         print("off Script")
 
 text = ""
