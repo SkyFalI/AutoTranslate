@@ -1,50 +1,50 @@
-импортировать клавиатуру
-импорт pyautogui
-время импорта
-импортировать пиперклип
-из deep_translator импортировать GoogleTranslator
+import keyboard
+import pyautogui
+import time
+import pyperclip
+from deep_translator import GoogleTranslator
 
 
-определение OnOffFunc():
-    глобальный включен
-    если включено == "выкл":
-        включено = "включено"
-    еще:
-        включить = "выключить"
+def OnOffFunc():
+    global enabled
+    if enabled == "off":
+        enabled = "on"
+    else:
+        enable = "off"
 
-деффу():
-    глобальный текст
-    глобальный язык
-    глобальное включение
-    если включено == "вкл":
-        время сна (0,05)
-        текст = pyperclip.paste()
-        пытаться:
-        если text[0] в символахRU:
-            язык = "en"
-        если text[0] в символахENG:
-            язык = "ru"
+def foo():
+    global text
+    global lang
+    global enable
+    if enabled == "on":
+        time.sleep(0.05)
+        text = pyperclip.paste()
+        try: 
+        if text[0] in symbolsRU:
+            lang = "en"
+        if text[0] in symbolsENG:
+            lang = "ru"        
         pyperclip.copy(GoogleTranslator(source='auto', target=lang).translate(text))
-        print("Справились! foo")
-        печать (текст)
-        текст = ""
-        кроме:
-            print('Ошибка поиска символов')
-    еще:
-        print("не по сценарию")
+        print("Coped! foo")
+        print(text)
+        text = ""
+        except:
+            print('Eror find symbols')
+    else:
+        print("off Script")
 
-текст = ""
-язык = ""
-включено = "выключено"
+text = ""
+lang = ""
+enabled = "off"
 
-символыENG = ['q','w','e','r','t','y','u','i','o','p','a','s' ,'d','f','g','h','j','k','l','z','x','c','v','b',' п','м',
-              «Q», «W», «E», «R», «T», «Y», «U», «I», «O», «P», «A», «S», «D». ','F','G','H','J','K','L','Z','X','C','V','B','N', 'М']
-символыRU = ['й','ц','у','к','е','н','г','ш','щ','з','х','ъ' ,'ф','ы','в','а','п','р','о','л','д','ж','э','я',' ч','с','м','и','т','ь','б','ю',
-             «Й», «Ц», «У», «К», «Е», «Н», «Г», «Ш», «Щ», «З», «Х», «Ъ», «Ф». ','Ы','В','А','П','Р','О','Л','Д','Ж','Э','Я','Ч', «С», «М», «И», «Т», «Ь», «Б», «Ю»,]
+symbolsENG = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m',
+              'Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M']
+symbolsRU = ['й','ц','у','к','е','н','г','ш','щ','з','х','ъ','ф','ы','в','а','п','р','о','л','д','ж','э','я','ч','с','м','и','т','ь','б','ю',
+             'Й','Ц','У','К','Е','Н','Г','Ш','Щ','З','Х','Ъ','Ф','Ы','В','А','П','Р','О','Л','Д','Ж','Э','Я','Ч','С','М','И','Т','Ь','Б','Ю',]
 
 keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
 keyboard.add_hotkey('Ctrl + C', foo)
 
-print("Мягкий старт!")
+print("Soft start!")
 
 keyboard.wait('Ctrl + Q')
