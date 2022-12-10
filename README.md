@@ -4,7 +4,7 @@
  and with Console in dist\autoTranslate\autoTranslateWithConsole.exe
 # Requirements
  - Python 3.10+
- - keyboard 0.13.5+
+ - ptnput 1.7.6+
  - PyAutoGUI 0.9.53+
  - pyperclip 1.8.2+
  - deep-translator 1.9.1+
