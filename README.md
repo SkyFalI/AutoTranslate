@@ -1,5 +1,5 @@
 # AutoTranslate
- Automatic text translation when copying ENG <-> RUS
+ Automatic text translation when copying ENG <-> RUS <br />
  exe file in dist\autoTranslate\autoTranslateWithOutConsole.exe <br />
  and with Console in dist\autoTranslate\autoTranslateWithConsole.exe
 # Requirements
