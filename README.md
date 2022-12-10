@@ -8,13 +8,23 @@
  - PyAutoGUI 0.9.53+
  - pyperclip 1.8.2+
  - deep-translator 1.9.1+
+ ```python
+from pynput import keyboard
+import pyautogui
+import time
+import pyperclip
+import sys
+from deep_translator import GoogleTranslator
+ ```
 # How it work's
  When you press the "Ctrl + Alt" key combination, you enable the auto-translation script. <br />
  The script translates the copied text when pressing the key combination "Ctrl + C" and pastes it into the clipboard. <br />
  Google Translator is used for translation 
 ```python
- keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
- keyboard.add_hotkey('Ctrl + C', foo)
+ keyboard.GlobalHotKeys({
+        '<ctrl>+c': on_copy,
+        '<ctrl>+q': on_quit,
+        '<ctrl>+<alt>': onoff_state})
 ```
  To determine the translated text, the script compares the first character of the copied string, so there will be an error when copying an incorrect   character.
  ```python
@@ -52,8 +62,10 @@ ____
  Скрипт переводит скопированный текст при нажатии комбинации клавиш "Ctrl+C" и вставляет его в буфер обмена. <br />
  Google Translator используется для перевода
 ```python
- keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
- keyboard.add_hotkey('Ctrl + C', foo)
+ keyboard.GlobalHotKeys({
+        '<ctrl>+c': on_copy,
+        '<ctrl>+q': on_quit,
+        '<ctrl>+<alt>': onoff_state})
 ```
  Для определения переведенного текста скрипт сравнивает первый символ копируемой строки, поэтому при копировании неверного символа будет ошибка.
  ```python
