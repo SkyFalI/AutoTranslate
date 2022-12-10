@@ -51,7 +51,7 @@ ____
  При нажатии комбинации клавиш «Ctrl+Alt» вы включаете скрипт автоперевода. <br />
  Скрипт переводит скопированный текст при нажатии комбинации клавиш "Ctrl+C" и вставляет его в буфер обмена. <br />
  Google Translator используется для перевода
-```pyhon
+```python
  keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
  keyboard.add_hotkey('Ctrl + C', foo)
 ```
