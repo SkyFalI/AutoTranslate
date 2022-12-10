@@ -1,6 +1,7 @@
 # AutoTranslate
  Automatic text translation when copying ENG <-> RUS
- exe file in dist\autoTranslate\autoTranslate.exe
+ exe file in dist\autoTranslate\autoTranslateWithOutConsole.exe
+ and with Console in dist\autoTranslate\autoTranslateWithConsole.exe
 # Requirements
  - Python 3.10+
  - keyboard 0.13.5+
