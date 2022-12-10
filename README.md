@@ -37,7 +37,7 @@ if text[0] in symbolsENG:
 - Develop script status display
 - debug everything exception
 ____
-##### All README was translated using a script :)
+All README was translated using a script :)
 ____
 # Автоперевод
  Автоматический перевод текста при копировании ENG<->RUS
@@ -76,5 +76,5 @@ if text[0] in symbolsENG:
 - Разработать отображение статуса скрипта
 - отлаживать все исключения
 ____
-##### Весь README был переведен с помощью скрипта :)
+Весь README был переведен с помощью скрипта :)
 ____
