@@ -1,6 +1,6 @@
 # AutoTranslate
  Automatic text translation when copying ENG <-> RUS
- exe file in dist\autoTranslate\autoTranslateWithOutConsole.exe
+ exe file in dist\autoTranslate\autoTranslateWithOutConsole.exe <br />
  and with Console in dist\autoTranslate\autoTranslateWithConsole.exe
 # Requirements
  - Python 3.10+
@@ -9,9 +9,9 @@
  - pyperclip 1.8.2+
  - deep-translator 1.9.1+
 # How it work's
- When you press the "Ctrl + Alt" key combination, you enable the auto-translation script. 
- The script translates the copied text when pressing the key combination "Ctrl + C" and pastes it into the clipboard.
- Google Translator is used for translation
+ When you press the "Ctrl + Alt" key combination, you enable the auto-translation script. <br />
+ The script translates the copied text when pressing the key combination "Ctrl + C" and pastes it into the clipboard. <br />
+ Google Translator is used for translation 
 ```python
  keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
  keyboard.add_hotkey('Ctrl + C', foo)
@@ -24,7 +24,7 @@ if text[0] in symbolsENG:
     lang = "ru"
 ```
 # Peculiarities
-- It takes time to translate. Be patient :)
+- It takes time to translate. Be patient :) 
 - Does not translate if the beginning of the copied string is from a character that is not included in the character array
 ```python
  symbolsENG = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m',
@@ -48,8 +48,8 @@ ____
  - pyperclip 1.8.2+
  - deep-translator 1.9.1
 # Как это работает
- При нажатии комбинации клавиш «Ctrl+Alt» вы включаете скрипт автоперевода.
- Скрипт переводит скопированный текст при нажатии комбинации клавиш "Ctrl+C" и вставляет его в буфер обмена.
+ При нажатии комбинации клавиш «Ctrl+Alt» вы включаете скрипт автоперевода. <br />
+ Скрипт переводит скопированный текст при нажатии комбинации клавиш "Ctrl+C" и вставляет его в буфер обмена. <br />
  Google Translator используется для перевода
 ```pyhon
  keyboard.add_hotkey('Ctrl + Alt', OnOffFunc)
@@ -63,7 +63,7 @@ if text[0] in symbolsENG:
     lang = "ru"
 ```
 # Особенности
-- Для перевода нужно время, Потерпи :)
+- Для перевода нужно время, Потерпи :) <br />
 - Не переводится, если копируемая строка начинается с символа, не входящего в массив символов.
 ```python
  symbolsENG = ['q','w','e','r','t','y','u','i','o','p','a','s' ,'d','f','g','h','j','k','l','z','x','c','v','b',' n','m',
